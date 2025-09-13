@@ -34,8 +34,8 @@ jobs:
           push: never
           runCmd: bash scripts/build.sh
           env:
-            - DUCKDB: ${{ env.DUCKDB }}
-            - ZIG: ${{ env.ZIG }}
+            DUCKDB: ${{ env.DUCKDB }}
+            ZIG: ${{ env.ZIG }}
 
       - name: Package
         uses: actions/upload-artifact@v4
