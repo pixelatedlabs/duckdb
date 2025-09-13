@@ -31,11 +31,9 @@ jobs:
       - name: Build
         uses: devcontainers/ci@v0.3
         with:
+          inheritEnv: true
           push: never
           runCmd: bash scripts/build.sh
-          env:
-            DUCKDB: ${{ env.DUCKDB }}
-            ZIG: ${{ env.ZIG }}
 
       - name: Package
         uses: actions/upload-artifact@v4
