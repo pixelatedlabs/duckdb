@@ -15,9 +15,6 @@
 	<a href=https://github.com/pixelatedlabs/duckdb/releases/latest>
 		<img alt=Release src=https://img.shields.io/github/v/release/pixelatedlabs/duckdb?style=for-the-badge></a>
 	&nbsp;
-	<a href=https://ziglang.org>
-		<img alt=Language src=https://img.shields.io/github/languages/top/pixelatedlabs/duckdb?style=for-the-badge></a>
-	&nbsp;
 	<a href=https://github.com/pixelatedlabs/duckdb/blob/master/license.txt>
 		<img alt=License src=https://img.shields.io/github/license/pixelatedlabs/duckdb?style=for-the-badge></a>
 </div>
