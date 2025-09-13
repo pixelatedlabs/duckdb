@@ -3,6 +3,7 @@
 # Setup environment variables.
 export ARCH=$(uname -m)
 export CXX="zig c++ -w"
+export LIB="$(dirname $BASH_SOURCE[0])/../lib"
 export PATH="/opt/zig:$PATH"
 export ZIG="0.15.1"
 
@@ -15,3 +16,8 @@ rm /tmp/zig.tar.xz
 # Clone & build duckdb.
 git clone --branch v1.3.2 --single-branch https://github.com/duckdb/duckdb /opt/duckdb
 (cd /opt/duckdb && make bundle-library)
+
+# Copy compile output to 'lib' directory.
+mkdir --parents $LIB
+cp /opt/duckdb/src/include/duckdb.h $LIB/duckdb.h
+cp /opt/duckdb/build/release/libduckdb_bundle.a $LIB/libduckdb.a
