@@ -2,8 +2,4 @@
 
 FROM quay.io/fedora/fedora:42
 
-RUN <<EOF
-	dnf --assumeyes --setopt=install_weak_deps=false group install development-tools
-
-	dnf --assumeyes --setopt=install_weak_deps=false install cmake git python3
-EOF
+RUN dnf --assumeyes --setopt=install_weak_deps=false install @development-tools cmake git python3
