@@ -5,10 +5,8 @@ set pipefail -euo
 # Setup environment variables.
 export ARCH=$(uname -m)
 export CXX="zig c++ -w"
-export DUCKDB="1.3.2"
 export LIB="$(dirname $BASH_SOURCE[0])/../lib"
 export PATH="/opt/zig:$PATH"
-export ZIG="0.15.1"
 
 # Install zig.
 mkdir /opt/zig
