@@ -34,10 +34,10 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: duckdb-${{ matrix.arch }}
-          path: lib/duckdb.zip
+          path: lib/*.zip
 
       - name: Publish
         if: github.event_name == 'release'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh release upload ${{ github.ref_name }} lib/duckdb.zip
+        run: gh release upload ${{ github.ref_name }} lib/*.zip

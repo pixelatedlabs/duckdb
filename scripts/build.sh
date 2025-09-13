@@ -1,5 +1,7 @@
 # This is free and unencumbered software released into the public domain.
 
+set pipefail -euo
+
 # Setup environment variables.
 export ARCH=$(uname -m)
 export CXX="zig c++ -w"
@@ -24,4 +26,9 @@ cp /opt/duckdb/src/include/duckdb.h $LIB/bin/duckdb.h
 cp /opt/duckdb/build/release/libduckdb_bundle.a $LIB/bin/libduckdb.a
 
 # Compress output files.
-zip --junk-paths $LIB/duckdb.zip $LIB/bin/*
+case $ARCH in
+	"aarch64") EXT="arm64" ;;
+	"x86_64") EXT="x64" ;;
+	*) EXT=$ARCH ;;
+esac
+zip --junk-paths $LIB/duckdb-$ZIG-$DUCKDB-$EXT.zip $LIB/bin/*
