@@ -14,4 +14,4 @@ rm /tmp/zig.tar.xz
 
 # Clone & build duckdb.
 git clone --branch v1.3.2 --single-branch https://github.com/duckdb/duckdb /opt/duckdb
-(cd /opt/duckdb && echo $PATH && make bundle-library)
+(cd /opt/duckdb && make bundle-library)
