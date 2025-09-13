@@ -5,7 +5,7 @@
 	<source media="(prefers-color-scheme: dark)" srcset="https://raw.github.com/duckdb/duckdb/f8761864efe92a157a0248bea3fb7446de13489a/logo/DuckDB_Logo-horizontal-dark-mode.png">
 	<img alt="DuckDB logo" src="https://raw.github.com/duckdb/duckdb/f8761864efe92a157a0248bea3fb7446de13489a/logo/DuckDB_Logo-horizontal.png">
 </picture>
-
+<br>
 <br>
 <div align=center>
 	<!--
